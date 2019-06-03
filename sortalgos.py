@@ -27,3 +27,13 @@ for j in range( len(arr) - 1, 0, -1 ):
     if maxindex != j:
         swap( arr, maxindex, j )
 print( arr )
+
+# Insertion Sort
+for i in range( 1, len( arr ), 1 ):
+    temp_value = arr[i]
+    j = i
+    while temp_value < arr[j - 1] and j > 0:
+        arr[j] = arr[j-1]
+        j -= 1
+    arr[j] = temp_value
+print( arr )
